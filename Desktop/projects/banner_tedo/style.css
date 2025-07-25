@@ -1,0 +1,167 @@
+.banner__container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  font-family: Inter;
+  width: calc(100% - 40px);
+}
+
+.banner__tittle {
+  /* font-family: livret; */
+  font-size: 52px;
+  color: #2e2e2e;
+  margin-top: 30px;
+  font-family: "TT Livret Medium";
+  src: url("fonts/TT Livret Text Trial Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  width: 70%;
+}
+
+.banner__subtittle {
+  font-size: 26px;
+  color: #2e2e2e;
+  margin-top: 30px;
+}
+
+.banner__image-container {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  background: linear-gradient(to bottom, #ffffff 0%, #3a63dc 100%);
+
+  background-size: 100% 200%; /* Увеличиваем вертикальный размер фона */
+  background-position: top;
+  background-repeat: no-repeat;
+  animation: banner__image-container_animateGradientTop 2s ease-in-out infinite;
+}
+
+@keyframes banner__image-container_animateGradientTop {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 0% -10%;
+  }
+}
+
+.bread-crumbs__container {
+  margin-top: 90px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  /* padding: 8px 16px; */
+  gap: 8px;
+  padding-bottom: 10px;
+}
+
+.banner__image_left {
+  width: 50%;
+}
+
+.banner__image_right {
+  width: 50%;
+}
+
+.banner__text {
+  margin-top: 30px;
+  max-width: 50%;
+  font-size: 16px;
+  color: #2e2e2e;
+}
+
+.banner__button-container {
+  display: flex;
+  margin-top: 45px;
+  gap: 15px;
+}
+
+.banner__button {
+  padding: 0 15px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+
+  color: white;
+  cursor: pointer;
+}
+
+.banner__button__button1 {
+  background-color: #3a63dc;
+}
+
+.banner__button__button2 {
+  background-color: #dc6d3a;
+}
+
+/* bread-crumb__container */
+
+.banner__bread-crumb {
+  font-size: 16px;
+  opacity: 0.7;
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+.banner__bread-crumb::after {
+  content: "/";
+  margin: 0 8px;
+  color: #888;
+}
+
+.banner__bread-crumb:last-of-type::after {
+  content: "";
+}
+
+.banner__bread-crumb_active {
+  opacity: 1;
+  color: #005ce7;
+}
+
+@media screen and (max-width: 960px) {
+  .banner__image_left {
+    display: none;
+  }
+
+  .banner__text {
+    max-width: 100%;
+  }
+
+  .banner__image-container {
+    justify-content: end;
+  }
+
+  .banner__tittle {
+    width: 100%;
+    font-size: 36px;
+  }
+
+.banner__subtittle {
+  font-size: 22px;
+
+}
+
+}
+
+@media screen and (max-width: 640px) {
+  .banner__image_right {
+    width: 100%;
+  }
+  .banner__image-container {
+    justify-content: center;
+  }
+
+  .banner__button-container {
+  display: flex;
+ flex-direction: column;
+
+}
+
+
+.banner__button {
+     width: auto;
+  align-self: flex-start; 
+}
+}
